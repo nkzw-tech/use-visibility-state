@@ -1,22 +1,20 @@
 import createContextHook from '@nkzw/create-context-hook';
-import { useEffect, useState } from 'react';
+import { useDeferredValue, useEffect, useState } from 'react';
 
-const [VisibilityStateContext, useVisibilityState] = createContextHook(
-  (onVisibilityChange?: (isVisible: boolean) => void) => {
+const [VisibilityStateContext, useVisibilityStateHook] = createContextHook(
+  () => {
     const [isVisible, setIsVisible] = useState(true);
 
     useEffect(() => {
       const onChange = () => {
         const newState = document.visibilityState !== 'hidden';
         if (newState !== isVisible) {
-          onVisibilityChange?.(newState);
           setIsVisible(newState);
         }
       };
 
       const setVisible = () => {
         if (!isVisible) {
-          onVisibilityChange?.(true);
           setIsVisible(true);
         }
       };
@@ -33,11 +31,25 @@ const [VisibilityStateContext, useVisibilityState] = createContextHook(
         document.removeEventListener('mouseenter', setVisible);
         document.removeEventListener('keydown', setVisible);
       };
-    }, [isVisible, onVisibilityChange]);
+    }, [isVisible]);
 
     return isVisible;
   },
 );
 
+export default function useVisibilityState(
+  onVisibilityChange?: (isVisible: boolean) => void,
+) {
+  const isVisible = useVisibilityStateHook();
+  const previousVisibility = useDeferredValue(isVisible);
+
+  useEffect(() => {
+    if (previousVisibility !== isVisible) {
+      onVisibilityChange?.(isVisible);
+    }
+  }, [isVisible, onVisibilityChange, previousVisibility]);
+
+  return isVisible;
+}
+
 export { VisibilityStateContext };
-export default useVisibilityState;
