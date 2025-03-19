@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@nkzw/create-context-hook':
-        specifier: ^1.0.1
-        version: 1.0.1(react@19.0.0)
+        specifier: ^1.0.2
+        version: 1.0.2(react@19.0.0)
     devDependencies:
       '@ianvs/prettier-plugin-sort-imports':
         specifier: ^4.4.1
@@ -332,8 +332,8 @@ packages:
   '@napi-rs/wasm-runtime@0.2.7':
     resolution: {integrity: sha512-5yximcFK5FNompXfJFoWanu5l8v1hNGqNHh9du1xETp9HWk/B/PzvchX55WYOPaIeNglG8++68AAiauBAtbnzw==}
 
-  '@nkzw/create-context-hook@1.0.1':
-    resolution: {integrity: sha512-gw186wNLpv7yfPQkZMtAQZ1qCdp0lP+DZDZe25VzhgfkXH76Tfa6URB+mVR1melTJOxkMYqbVgxEvLLmkENP3A==}
+  '@nkzw/create-context-hook@1.0.2':
+    resolution: {integrity: sha512-AMjyPpNCO1ODAhphHQFozazUDLFFtQBh75lWzDNZDeclBgCgCdv4Ipyo+Y6FyXbNu28HM8rBjX/rssKx1HU5lA==}
     peerDependencies:
       react: ^19.0.0
 
@@ -2276,7 +2276,7 @@ snapshots:
       '@tybys/wasm-util': 0.9.0
     optional: true
 
-  '@nkzw/create-context-hook@1.0.1(react@19.0.0)':
+  '@nkzw/create-context-hook@1.0.2(react@19.0.0)':
     dependencies:
       react: 19.0.0
 
