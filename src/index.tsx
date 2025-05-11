@@ -22,7 +22,7 @@ const [VisibilityStateContext, useVisibilityStateHook] = createContextHook(
       if (document.visibilityState === 'hidden') {
         // When the system goes to sleep, sometimes the `visibilitychange` event is not fired.
         // In that case, we can use `mouseenter` or `keydown` to detect when the window is focused.
-        document.addEventListener('mousemove', setVisible);
+        document.addEventListener('mouseenter', setVisible);
         document.addEventListener('keydown', setVisible);
       }
       document.addEventListener('visibilitychange', onChange);

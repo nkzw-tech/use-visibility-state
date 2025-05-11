@@ -1,6 +1,6 @@
 {
   "name": "@nkzw/use-visibility-state",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React to document visibility changes to pause or resume animations and tasks.",
   "type": "module",
   "main": "./lib/index.js",
