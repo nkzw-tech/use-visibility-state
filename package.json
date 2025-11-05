@@ -1,10 +1,10 @@
 {
   "name": "@nkzw/use-visibility-state",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React to document visibility changes to pause or resume animations and tasks.",
   "type": "module",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
+  "main": "./lib/index.mjs",
+  "types": "./lib/index.d.mts",
   "files": [
     "lib"
   ],
@@ -25,17 +25,17 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@ianvs/prettier-plugin-sort-imports": "^4.4.1",
-    "@nkzw/eslint-config": "^2.4.0",
-    "@types/node": "^22.15.17",
-    "@types/react": "^19.1.3",
-    "@typescript-eslint/eslint-plugin": "^8.32.0",
-    "@typescript-eslint/parser": "^8.32.0",
-    "eslint": "^9.26.0",
-    "prettier": "^3.5.3",
-    "react": "^19.1.0",
-    "tsdown": "^0.11.3",
-    "typescript": "^5.8.3"
+    "@ianvs/prettier-plugin-sort-imports": "^4.7.0",
+    "@nkzw/eslint-config": "^3.2.1",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.2",
+    "@typescript-eslint/eslint-plugin": "^8.46.3",
+    "@typescript-eslint/parser": "^8.46.3",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2",
+    "react": "^19.2.0",
+    "tsdown": "^0.16.0",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "react": "^19.0.0"
